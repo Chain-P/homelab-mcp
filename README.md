@@ -9,6 +9,8 @@ checking by hand.
 Read-only by design: every tool queries state, nothing restarts, stops, or
 reboots anything.
 
+![Claude Code asking whether zero-bot is running and getting real systemd status back](assets/demo.gif)
+
 ## Architecture
 
 The server runs **on the Pi itself** — not on the machine running the MCP
