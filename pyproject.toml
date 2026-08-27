@@ -1,0 +1,26 @@
+[project]
+name = "homelab-mcp"
+version = "0.1.0"
+description = "Raspberry Pi homelab status (systemd services, disk, CPU temp, game-server feed) exposed as an MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = [
+    "mcp[cli]>=2.0.0",
+]
+
+[project.scripts]
+homelab-mcp = "homelab_mcp.server:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.6",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
